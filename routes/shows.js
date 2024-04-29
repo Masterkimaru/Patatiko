@@ -15,11 +15,13 @@ router.route('/add').post((req, res) => {
     image,
     priceRegular,
     priceVIP,
+    priceCouple,
+    priceGroupOf5,
+    priceAdvance,
     description,
     cast,
     videoUrl,
-    startTime,
-    endTime,
+    occurrences, // Assuming occurrences are provided in the request body as an array of objects
     venue,
     numberOfTickets
   } = req.body;
@@ -29,11 +31,13 @@ router.route('/add').post((req, res) => {
     image,
     priceRegular,
     priceVIP,
+    priceCouple,
+    priceGroupOf5,
+    priceAdvance,
     description,
     cast,
     videoUrl,
-    startTime,
-    endTime,
+    occurrences,
     venue,
     numberOfTickets
   });

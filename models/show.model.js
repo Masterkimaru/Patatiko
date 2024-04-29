@@ -7,11 +7,19 @@ const showSchema = new Schema({
   image: { type: String, required: true },
   priceRegular: { type: Number, required: true },
   priceVIP: { type: Number, required: true },
+  priceCouple: { type: Number, required: true },
+  priceGroupOf5: { type: Number, required: true },
+  priceAdvance: { type: Number, required: true },
   description: { type: String, required: true },
   cast: { type: [String], required: true },
   videoUrl: { type: String, required: true },
-  startTime: { type: Date, required: true }, // Assuming startTime and endTime are Date objects
-  endTime: { type: Date, required: true },
+  occurrences: [{
+    dayOfWeek: { type: String, required: true }, // e.g., "Monday", "Tuesday", etc.
+    timings: [{
+      startTime: { type: Date, required: true },
+      endTime: { type: Date, required: true }
+    }]
+  }],
   venue: { type: String, required: true },
   numberOfTickets: { type: Number, required: true },
 });
